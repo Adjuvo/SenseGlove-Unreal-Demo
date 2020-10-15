@@ -5,11 +5,11 @@ This directory contains assets and blueprints to run the Demo Scenes in Unreal
 ## Getting the sources
 This repository uses submodules. You need the --recursive option to fetch the submodules automatically:
 
-`$ git clone --recurse-submodules https://gitlab.com/Adjuvo/SenseGlove-Unreal-Demo`
+`$ git clone --recurse-submodules https://github.com/Adjuvo/SenseGlove-Unreal-Demo`
 
 Alternatively:
 
-`$ git clone https://gitlab.com/Adjuvo/SenseGlove-Unreal-Demo`
+`$ git clone https://github.com/Adjuvo/SenseGlove-Unreal-Demo`
 
 `$ cd SenseGlove-Unreal-Demo`
 
@@ -32,11 +32,13 @@ Open the Unreal Project file (not the .sln file), it will recompile the source a
 In the master branch there are two folders in the Content directory:
 1. HandMeshes/ -- compatible .fbx imports 
 2. Examples/ -- examples on about grabbing and tracing
+3. Level/ -- demo level
+4. Models/ -- 3D Models in the example level
 
 ## Developing on this repo
 Some hints for developing:
 
-- Make sure you are in the master branch `git checkout master`. You can branch from there, for example:
+- Make sure you are in the release branch `git checkout release`. You can branch from there, for example:
 `git branch myNewDemo`
 
 Of course, you can also fork this repo, but make sure you set an upstream link to keep updated!
