@@ -2,9 +2,6 @@
 
 This directory contains assets and blueprints to run the Demo Scenes in Unreal
 
-## Current status
-master branch: ![badge](https://gitlab.com/senseglove/ue4-senseglove-demo-scene/badges/master/pipeline.svg "status")
-
 ## Getting the sources
 This repository uses submodules. You need the --recursive option to fetch the submodules automatically:
 
