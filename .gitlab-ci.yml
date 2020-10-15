@@ -1,0 +1,30 @@
+# 
+# Rob's automagic build script
+#
+
+variables:
+        GIT_SUBMODULE_STRATEGY: recursive
+
+stages:
+    - build    
+
+build:
+    stage: build
+    script:
+    - echo "Building target editor"
+    - cd "C:/Program Files/Epic Games/UE_4.24/Engine"
+    - ./Build/BatchFiles/Build.bat StaticLoadEditor Win64 Development $CI_PROJECT_DIR/StaticLoad.uproject -WaitMutex
+    - echo "Build, Cook and Run"
+    - ./Build/BatchFiles/RunUAT.bat BuildCookRun -Project="$CI_PROJECT_DIR/StaticLoad.uproject" -NoP4 -NoCompileEditor -Distribution -TargetPlatform=Win64 -Platform=Win64 -ClientConfig=Shipping -ServerConfig=Shipping -Cook -Map=Demo -Build -Stage -Pak -Archive -ArchiveDirectory="$CI_PROJECT_DIR/AutoBuild/" -Rocket -Prereqs -Package
+    - echo "Staging .DLLs"
+    - cp $CI_PROJECT_DIR/Binaries/Win64/SGCore.dll $CI_PROJECT_DIR/AutoBuild/WindowsNoEditor/StaticLoad/Binaries/Win64
+    - echo "Success!"
+    artifacts:
+            paths:
+            - AutoBuild/WindowsNoEditor/Engine/*
+            - AutoBuild/WindowsNoEditor/StaticLoad/*
+            - AutoBuild/WindowsNoEditor/StaticLoad.exe
+            - Autobuild/WindowsNoEditor/Manifest*
+    tags:
+    - robs-test-runner
+

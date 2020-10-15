@@ -1,0 +1,3 @@
+[submodule "Plugins/ue4-senseglove-plugin"]
+	path = Plugins/ue4-senseglove-plugin
+	url = ../ue4-senseglove-plugin

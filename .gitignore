@@ -1,0 +1,13 @@
+.gitignore
+.vs
+Intermediate/*
+Saved/*
+Binaries/Win64/StaticLoadEditor.target
+Binaries/Win64/UE4Editor-StaticLoad-0118.dll
+Binaries/Win64/UE4Editor-StaticLoad-0118.pdb
+Binaries/Win64/UE4Editor-StaticLoad.dll
+Binaries/Win64/UE4Editor-StaticLoad.pdb
+Binaries/Win64/UE4Editor.modules
+Binaries/*
+Build/*
+
