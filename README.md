@@ -29,11 +29,14 @@ This will be enough if you are just using the plugin submodule and not developin
 
 ## Running
 Open the Unreal Project file (not the .sln file), it will recompile the source and plugin directory.
-In the master branch there are two folders in the Content directory:
+In the master branch there are four folders in the Content directory:
 1. HandMeshes/ -- compatible .fbx imports 
 2. Examples/ -- examples on about grabbing and tracing
 3. Level/ -- demo level
 4. Models/ -- 3D Models in the example level
+
+## Create a binding for the Vive trackers
+Check the Wiki tutorial page [here](https://github.com/Adjuvo/SenseGlove-Unreal-Demo/wiki/Setting-up-Vive-trackers)
 
 ## Developing on this repo
 Some hints for developing:
